@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /settings
+Disallow: /messages
+
+Sitemap: https://upnext.com/sitemap.xml

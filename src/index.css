@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-upnext-bg: #050507;
+  --color-upnext-void: #000000;
+  --color-upnext-surface: #0f0f14;
+  --color-upnext-surface-2: #16161d;
+  --color-upnext-border: #232330;
+  --color-upnext-primary: #a78bfa;
+  --color-upnext-primary-glow: #c4b5fd;
+  --color-upnext-primary-dark: #7c3aed;
+  --color-upnext-gold: #fbbf24;
+  --color-upnext-text: #f4f4f5;
+  --color-upnext-muted: #8b8b96;
+
+  --font-display: 'Clash Display', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-upnext-primary) transparent;
+}
+
+html,
+body {
+  background-color: var(--color-upnext-bg);
+  color: var(--color-upnext-text);
+  overscroll-behavior: none;
+}
+
+/* Custom cursor hides native cursor on desktop only */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}
+
+::selection {
+  background: var(--color-upnext-primary);
+  color: #000;
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+/* Updated src/index.css */
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body {
+    cursor: none;
+  }
+}
+
+/* Always show a visible focus ring for keyboard users, regardless of cursor mode */
+:focus-visible {
+  outline: 2px solid var(--color-upnext-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+/* Native date/time inputs (calendar icon) dark background pe visible rahein */
+input[type="datetime-local"],
+input[type="date"],
+input[type="time"] {
+  color-scheme: dark;
+}
