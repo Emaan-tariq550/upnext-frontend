@@ -21,16 +21,21 @@ export default function AppLayout() {
       <AchievementUnlockToast />
       <ConnectionBanner />
       <IncomingCallModal />
-      <div className="hidden md:block">
+
+      <div className="app-sidebar-desktop hidden md:block">
         <Sidebar />
       </div>
+
       <div className="relative z-10 md:pl-0">
         <Topbar />
         <main className="mx-4 mt-6 pb-24 md:pb-10 md:ml-72">
           <Outlet />
         </main>
       </div>
-      <MobileBottomNav />
+
+      <div className="app-mobile-bottom-nav">
+        <MobileBottomNav />
+      </div>
     </div>
   );
 }

@@ -64,3 +64,15 @@ input[type="date"],
 input[type="time"] {
   color-scheme: dark;
 }
+/* Failsafe layout rules — Tailwind responsive utilities pe depend nahi karte */
+@media (max-width: 767px) {
+  .app-sidebar-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-mobile-bottom-nav {
+    display: none !important;
+  }
+}
