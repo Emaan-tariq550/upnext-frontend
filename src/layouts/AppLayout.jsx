@@ -16,7 +16,7 @@ export default function AppLayout() {
   const weather = useAmbientStore((s) => s.weather);
 
   return (
-    <div className="relative min-h-screen bg-upnext-bg">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-upnext-bg">
       <AmbientWeather type={weather} />
       <AchievementUnlockToast />
       <ConnectionBanner />
@@ -26,9 +26,9 @@ export default function AppLayout() {
         <Sidebar />
       </div>
 
-      <div className="relative z-10 md:pl-0">
+      <div className="relative z-10 w-full">
         <Topbar />
-        <main className="mx-4 mt-6 pb-24 md:pb-10 md:ml-72">
+        <main className="mx-3 mt-6 w-auto pb-24 sm:mx-4 md:ml-72 md:pb-10">
           <Outlet />
         </main>
       </div>

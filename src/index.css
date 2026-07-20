@@ -64,7 +64,7 @@ input[type="date"],
 input[type="time"] {
   color-scheme: dark;
 }
-/* Failsafe layout rules — Tailwind responsive utilities pe depend nahi karte */
+/* Failsafe layout rules */
 @media (max-width: 767px) {
   .app-sidebar-desktop {
     display: none !important;
@@ -75,4 +75,14 @@ input[type="time"] {
   .app-mobile-bottom-nav {
     display: none !important;
   }
+}
+
+/* Horizontal overflow prevent — mobile pe content cut hone se bachata hai */
+html, body, #root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }

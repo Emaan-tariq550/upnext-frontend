@@ -16,11 +16,10 @@ export default function Topbar() {
   };
 
   return (
-    /* Header classes fixed with responsive margins and paddings */
-    <header className="sticky top-4 z-30 mx-4 flex items-center justify-between rounded-2xl border border-upnext-border bg-upnext-surface/60 px-4 py-3 backdrop-blur-xl sm:px-6 md:ml-72">
+    <header className="sticky top-3 z-30 mx-3 flex items-center justify-between rounded-2xl border border-upnext-border bg-upnext-surface/60 px-4 py-3 backdrop-blur-xl sm:mx-4 sm:top-4 sm:px-6 md:ml-72">
       <div>
         <p className="text-xs text-upnext-muted">Level {user?.level ?? 1}</p>
-        <div className="mt-1 h-1.5 w-32 overflow-hidden rounded-full bg-upnext-border">
+        <div className="mt-1 h-1.5 w-24 overflow-hidden rounded-full bg-upnext-border sm:w-32">
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: `${((user?.xp ?? 0) % 100)}%` }}
@@ -33,10 +32,10 @@ export default function Topbar() {
         <button
           data-cursor-hover
           onClick={() => setMenuOpen(!menuOpen)}
-          className="flex items-center gap-2 rounded-xl px-3 py-2 hover:bg-white/5"
+          className="flex items-center gap-2 rounded-xl px-2 py-2 hover:bg-white/5 sm:px-3"
         >
-          <span className="text-sm">{user?.displayName}</span>
-          <FiChevronDown className={`transition-transform ${menuOpen ? 'rotate-180' : ''}`} />
+          <span className="max-w-[100px] truncate text-sm sm:max-w-none">{user?.displayName}</span>
+          <FiChevronDown className={`shrink-0 transition-transform ${menuOpen ? 'rotate-180' : ''}`} />
         </button>
 
         <AnimatePresence>

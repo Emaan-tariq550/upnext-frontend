@@ -43,14 +43,14 @@ export default function CommandPalette() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setOpen(false)}
-          className="fixed inset-0 z-[100] flex items-start justify-center bg-black/70 backdrop-blur-sm pt-32 p-4"
+          className="fixed inset-0 z-[100] flex items-start justify-center bg-black/70 p-4 pt-24 backdrop-blur-sm sm:pt-32"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: -10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
             onClick={(e) => e.stopPropagation()}
-            className="w-full max-w-xl rounded-2xl border border-upnext-border bg-upnext-surface shadow-2xl"
+            className="w-[calc(100%-2rem)] max-w-xl rounded-2xl border border-upnext-border bg-upnext-surface shadow-2xl sm:w-full"
           >
             <div className="flex items-center gap-3 border-b border-upnext-border px-4 py-3">
               <FiSearch className="text-upnext-muted" />

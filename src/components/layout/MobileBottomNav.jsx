@@ -16,7 +16,7 @@ export default function MobileBottomNav() {
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-40 flex items-center justify-around border-t border-upnext-border bg-upnext-surface/90 pb-[env(safe-area-inset-bottom)] backdrop-blur-xl md:hidden"
+      className="fixed bottom-0 left-0 right-0 z-40 flex items-center justify-around border-t border-upnext-border bg-upnext-surface/90 pb-[max(env(safe-area-inset-bottom),12px)] backdrop-blur-xl md:hidden"
       aria-label="Primary mobile navigation"
     >
       {MOBILE_NAV_ITEMS.map((item) => (
